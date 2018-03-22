@@ -1,0 +1,1 @@
+select category_name, sum(item_price) as total_price from rezodb.item inner join rezodb.item_category on item.category_id = item_category.category_id group by category_name order by sum(item_price) desc;
